@@ -3,7 +3,7 @@ Finished installing angular-quickstart, brief re-learning of Jasmine, including 
 
 To do list:
 BASIC:
-    Build grid of numbers
+    30m: Build grid of numbers
     Create state store
     Store numbers in state, display in UI
     Basic arithmetic
