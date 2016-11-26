@@ -4,9 +4,10 @@ Finished installing angular-quickstart, brief re-learning of Jasmine, including 
 To do list:
 BASIC:
     30m: Build grid of numbers
-    Create state store
+    50m: Create state store
     Store numbers in state, display in UI
     Basic arithmetic
+    Backspace
     Display history of commands
     Equal button
     Listen to keypresses from anywhere on the page
