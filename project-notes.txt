@@ -1,0 +1,18 @@
+Started: roughly 4pm on 11/26/2016
+Finished installing angular-quickstart, brief re-learning of Jasmine, including / installing proper packages, etc. at roughly 5pm.
+
+To do list:
+BASIC:
+    Build grid of numbers
+    Create state store
+    Store numbers in state, display in UI
+    Basic arithmetic
+    Display history of commands
+    Equal button
+    Listen to keypresses from anywhere on the page
+    +/- button
+    Clear buttons
+    Square button
+ADVANCED:
+    Honor order of operations
+    Parentheses for arbitrary grouping
