@@ -40,6 +40,8 @@ export class AppComponent {
             this.currentActions.applyNumericCharacter(action);
         } else if(['+', '-', '*', '/'].indexOf(action) >= 0) {
             this.pendingOperatorActions.begin(action);
+        } else if(action === '=') {
+            this.pendingOperatorActions.finish();
         } else {
             console.log('Unknown action: ' + action);
         }

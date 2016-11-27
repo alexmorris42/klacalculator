@@ -8,6 +8,9 @@ export function pendingOperator(state: string = INITIAL_STATE, action: PayloadAc
         case PendingOperatorActions.PENDING_BEGIN_OPERATOR:
             return action.payload;
 
+        case 'APPLY_OPERATOR':
+            return '';
+
         default:
             return state;
     }

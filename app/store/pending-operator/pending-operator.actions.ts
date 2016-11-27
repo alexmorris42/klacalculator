@@ -10,6 +10,13 @@ export class PendingOperatorActions {
 
     public begin(operator: string) {
         // Apply current operator if the current value exists
+        this.finish();
+
+        // Begin next operator
+        this.ngRedux.dispatch({ type: PendingOperatorActions.PENDING_BEGIN_OPERATOR, payload: operator });
+    }
+
+    public finish() {
         let state: AppState = this.ngRedux.getState();
         if(state.current) {
             this.ngRedux.dispatch({ type: 'APPLY_OPERATOR', payload: {
@@ -17,8 +24,5 @@ export class PendingOperatorActions {
                 operator: state.pendingOperator
             } });
         }
-
-        // Begin next operator
-        this.ngRedux.dispatch({ type: PendingOperatorActions.PENDING_BEGIN_OPERATOR, payload: operator });
     }
 }

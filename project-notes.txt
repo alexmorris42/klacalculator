@@ -8,11 +8,11 @@ BASIC:
     120m: Store numbers in state, display in UI, also configure Karma properly
     130m: Listen to keypresses from anywhere on the page
     170m: Basic arithmetic
+    Equal button
+    Clear buttons
     Backspace
     Display history of commands
-    Equal button
     +/- button
-    Clear buttons
     Square button
 ADVANCED:
     Honor order of operations

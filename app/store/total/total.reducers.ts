@@ -7,6 +7,8 @@ export function total(state: number = INITIAL_STATE, action: PayloadAction): num
         case 'APPLY_OPERATOR':
             let value = parseFloat(action.payload.current);
             switch(action.payload.operator) {
+                case '':
+                    return value;
                 case '+':
                     return state + value;
                 case '-':
