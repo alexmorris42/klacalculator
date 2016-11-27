@@ -25,7 +25,7 @@ export class CurrentActions {
     }
 
     public clearCurrentOnly() {
-        this.ngRedux.dispatch({ type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
+        this.ngRedux.dispatch({ type: CurrentActions.CURRENT_CLEAR, payload: null });
     }
 
     public clearAll() {
