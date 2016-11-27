@@ -20,4 +20,9 @@ describe('CurrentReducer', function () {
         let result = current(undefined, { type: CurrentActions.CURRENT_APPLY_NUMERIC_CHARACTER, payload: '0' });
         expect(result).toBe('');
     });
+
+    it('should clear current string when operator is applied', () => {
+        let result = current('123', { type: 'APPLY_OPERATOR', payload: { current: '123', operator: '+' } });
+        expect(result).toBe('');
+    });
 });

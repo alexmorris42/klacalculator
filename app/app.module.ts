@@ -5,6 +5,7 @@ import { NgReduxModule, NgRedux, DevToolsExtension } from 'ng2-redux';
 import { AppState, INITIAL_STATE, rootReducer } from './store/root-store';
 
 import { CurrentActions } from './store/current/current.actions';
+import { PendingOperatorActions } from './store/pending-operator/pending-operator.actions';
 
 import { AppComponent }  from './app.component';
 import { CalculatorButtonsComponent } from './components/calculator-buttons.component';
@@ -24,7 +25,8 @@ import { SingleButtonComponent } from './components/single-button.component';
     SingleButtonComponent
   ],
   providers:    [
-    CurrentActions
+    CurrentActions,
+    PendingOperatorActions
   ],
   bootstrap:    [ AppComponent ]
 })

@@ -11,6 +11,9 @@ export function current(state: string = INITIAL_STATE, action: PayloadAction): s
                 return state; // Do not add a leading zero
             }
             return state.toString() + value;
+        
+        case 'APPLY_OPERATOR':
+            return '';
 
         default:
             return state;

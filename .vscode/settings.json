@@ -7,4 +7,6 @@
         "**/*.css": { "when": "$(basename).less"},
         "**/*.map": { "when": "$(basename)" }
     }
+,
+"typescript.tsdk": "./node_modules/typescript/lib"
 }

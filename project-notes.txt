@@ -6,8 +6,8 @@ BASIC:
     30m: Build grid of numbers
     50m: Create state store
     120m: Store numbers in state, display in UI, also configure Karma properly
-    Listen to keypresses from anywhere on the page
-    Basic arithmetic
+    130m: Listen to keypresses from anywhere on the page
+    170m: Basic arithmetic
     Backspace
     Display history of commands
     Equal button
