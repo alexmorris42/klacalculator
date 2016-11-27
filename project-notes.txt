@@ -5,12 +5,12 @@ To do list:
 BASIC:
     30m: Build grid of numbers
     50m: Create state store
-    Store numbers in state, display in UI
+    120m: Store numbers in state, display in UI, also configure Karma properly
+    Listen to keypresses from anywhere on the page
     Basic arithmetic
     Backspace
     Display history of commands
     Equal button
-    Listen to keypresses from anywhere on the page
     +/- button
     Clear buttons
     Square button

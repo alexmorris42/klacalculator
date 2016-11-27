@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { NgRedux, select } from 'ng2-redux';
 
@@ -23,7 +23,16 @@ export class AppComponent {
         private currentActions: CurrentActions
     ) {}
 
-    public applyAction(value: string) {
-        this.currentActions.applyNumericCharacter(value);
+    @HostListener('document:keypress', ['$event'])
+    public handleKeyPress(event: KeyboardEvent) {
+        this.applyAction(event.key);
+    }
+
+    public applyAction(action: string) {
+        if(action >= '0' && action <= '9') {
+            this.currentActions.applyNumericCharacter(action);
+        } else {
+            console.log('Unknown action: ' + action);
+        }
     }
 }
