@@ -15,6 +15,12 @@ export function current(state: string = INITIAL_STATE, action: PayloadAction): s
         case CurrentActions.CURRENT_REMOVE_CHARACTER:
             return state.slice(0, -1);
         
+        case CurrentActions.CURRENT_TOGGLE_SIGN:
+            if(state.slice(0, 1) === '-') {
+                return state.slice(1);
+            }
+            return '-' + state;
+        
         case CurrentActions.CURRENT_CLEAR:
             return '';
         

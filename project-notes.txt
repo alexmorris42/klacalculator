@@ -11,8 +11,8 @@ BASIC:
     180m: Equal button
     190m: Clear buttons
     200m: Backspace
-    Display history of commands
-    +/- button
+    230m: Display history of commands
+    240m: +/- button
     Square button
 ADVANCED:
     Honor order of operations

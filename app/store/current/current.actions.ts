@@ -6,6 +6,7 @@ import { AppState } from '../root-store';
 export class CurrentActions {
     static CURRENT_APPLY_NUMERIC_CHARACTER = 'CURRENT_APPLY_NUMERIC_CHARACTER';
     static CURRENT_REMOVE_CHARACTER = 'CURRENT_REMOVE_CHARACTER';
+    static CURRENT_TOGGLE_SIGN = 'CURRENT_TOGGLE_SIGN';
     static CURRENT_CLEAR = 'CURRENT_CLEAR';
     static CLEAR_ALL = 'CLEAR_ALL';
 
@@ -17,6 +18,10 @@ export class CurrentActions {
 
     public removeCharacter() {
         this.ngRedux.dispatch({ type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
+    }
+
+    public toggleSign() {
+        this.ngRedux.dispatch({ type: CurrentActions.CURRENT_TOGGLE_SIGN, payload: null });
     }
 
     public clearCurrentOnly() {

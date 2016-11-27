@@ -16,6 +16,16 @@ describe('CurrentReducer', function () {
         expect(result).toBe('23107');
     });
 
+    it('should toggle from positive to negative', () => {
+        let result = current('2310', { type: CurrentActions.CURRENT_TOGGLE_SIGN, payload: null });
+        expect(result).toBe('-2310');
+    });
+
+    it('should toggle from negative to positive', () => {
+        let result = current('-2310', { type: CurrentActions.CURRENT_TOGGLE_SIGN, payload: null });
+        expect(result).toBe('2310');
+    });
+
     it('should ignore leading zero', () => {
         let result = current(undefined, { type: CurrentActions.CURRENT_APPLY_NUMERIC_CHARACTER, payload: '0' });
         expect(result).toBe('');
