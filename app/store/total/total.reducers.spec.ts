@@ -1,6 +1,7 @@
 import { async, TestBed } from '@angular/core/testing';
 
 import { total } from './total.reducers';
+import { CurrentActions } from '../current/current.actions';
 
 ////////  SPECS  /////////////
 describe('PendingOperatorReducer', function () {
@@ -43,5 +44,10 @@ describe('PendingOperatorReducer', function () {
             operator: ''
         } });
         expect(result).toBe(5);
+    });
+
+    it('should clear when clear all is requested', () => {
+        let result = total(6, { type: CurrentActions.CLEAR_ALL, payload: null });
+        expect(result).toBe(0);
     });
 });

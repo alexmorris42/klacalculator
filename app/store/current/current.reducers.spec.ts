@@ -25,4 +25,14 @@ describe('CurrentReducer', function () {
         let result = current('123', { type: 'APPLY_OPERATOR', payload: { current: '123', operator: '+' } });
         expect(result).toBe('');
     });
+
+    it('should clear current string when clear is requested', () => {
+        let result = current('123', { type: CurrentActions.CURRENT_CLEAR, payload: null });
+        expect(result).toBe('');
+    });
+
+    it('should clear current string when clear all is requested', () => {
+        let result = current('123', { type: CurrentActions.CLEAR_ALL, payload: null });
+        expect(result).toBe('');
+    });
 });

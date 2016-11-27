@@ -12,6 +12,12 @@ export function current(state: string = INITIAL_STATE, action: PayloadAction): s
             }
             return state.toString() + value;
         
+        case CurrentActions.CURRENT_CLEAR:
+            return '';
+        
+        case CurrentActions.CLEAR_ALL:
+            return INITIAL_STATE;
+        
         case 'APPLY_OPERATOR':
             return '';
 

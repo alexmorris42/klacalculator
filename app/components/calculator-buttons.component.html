@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-sm-3 clickable"></div>
-    <div class="col-sm-3 clickable"></div>
+    <single-button text="CE" (action)="currentActions.clearCurrentOnly()"></single-button>
+    <single-button text="C" (action)="currentActions.clearAll()"></single-button>
     <div class="col-sm-3 clickable"></div>
     <single-button text="/" (action)="applyAction($event)"></single-button>
 </div>

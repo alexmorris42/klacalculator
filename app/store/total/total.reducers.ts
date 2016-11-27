@@ -1,4 +1,5 @@
 import { PayloadAction } from '../root-store';
+import { CurrentActions } from '../current/current.actions';
 
 const INITIAL_STATE: number = 0;
 
@@ -20,6 +21,9 @@ export function total(state: number = INITIAL_STATE, action: PayloadAction): num
             }
             return state;
 
+        case CurrentActions.CLEAR_ALL:
+            return INITIAL_STATE;
+            
         default:
             return state;
     }
