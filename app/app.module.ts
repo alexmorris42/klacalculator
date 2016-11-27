@@ -10,6 +10,7 @@ import { PendingOperatorActions } from './store/pending-operator/pending-operato
 import { AppComponent }  from './app.component';
 import { CalculatorButtonsComponent } from './components/calculator-buttons.component';
 import { CurrentValueComponent } from './components/current-value.component';
+import { HistoryComponent } from './components/history.component';
 import { SingleButtonComponent } from './components/single-button.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SingleButtonComponent } from './components/single-button.component';
 
     CalculatorButtonsComponent,
     CurrentValueComponent,
+    HistoryComponent,
     SingleButtonComponent
   ],
   providers:    [

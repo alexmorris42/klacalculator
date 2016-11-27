@@ -10,7 +10,7 @@ BASIC:
     170m: Basic arithmetic
     180m: Equal button
     190m: Clear buttons
-    Backspace
+    200m: Backspace
     Display history of commands
     +/- button
     Square button

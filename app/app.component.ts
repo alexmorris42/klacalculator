@@ -11,6 +11,7 @@ import { PendingOperatorActions } from './store/pending-operator/pending-operato
     template: `
     <h1>KL&amp;A Calculator</h1>
     <div id="main-ui" class="container">
+        <history [values]="history$ | async" [pendingOperator]="pendingOperator$ | async"></history>
         <current-value [value]="current$ | async" [total]="total$ | async"></current-value>
         <calculator-buttons (action)="applyAction($event)"></calculator-buttons>
     </div>
@@ -18,6 +19,8 @@ import { PendingOperatorActions } from './store/pending-operator/pending-operato
 })
 export class AppComponent {
     @select() current$: Observable<string>;
+    @select() history$: Observable<string[]>;
+    @select() pendingOperator$: Observable<string>;
     @select() total$: Observable<number>;
 
     constructor(
@@ -45,7 +48,7 @@ export class AppComponent {
     }
 
     public applyAction(action: string) {
-        if(action >= '0' && action <= '9') {
+        if(action === '.' || (action >= '0' && action <= '9')) {
             this.currentActions.applyNumericCharacter(action);
         } else if(['+', '-', '*', '/'].indexOf(action) >= 0) {
             this.pendingOperatorActions.begin(action);

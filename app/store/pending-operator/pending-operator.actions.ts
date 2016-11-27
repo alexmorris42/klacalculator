@@ -18,7 +18,7 @@ export class PendingOperatorActions {
 
     public finish() {
         let state: AppState = this.ngRedux.getState();
-        if(state.current) {
+        if(state.current) { // Do nothing if the user hasn't typed anything into the box
             this.ngRedux.dispatch({ type: 'APPLY_OPERATOR', payload: {
                 current: state.current,
                 operator: state.pendingOperator
