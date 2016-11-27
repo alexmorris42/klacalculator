@@ -3,11 +3,18 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-calculator-buttons .container {
+#main-ui {
   width: 200px;
-  margin-left: 0;
+  margin-left: 15px;
 }
 
-calculator-buttons .row {
-  padding-bottom: 15px;
+#main-ui .row {
+  margin-bottom: 15px;
+}
+
+current-value .row {
+  border: solid 1px gray;
+  border-radius: 3px;
+  text-align: right;
+  font-size: larger;
 }

@@ -8,6 +8,7 @@ import { CurrentActions } from './store/current/current.actions';
 
 import { AppComponent }  from './app.component';
 import { CalculatorButtonsComponent } from './components/calculator-buttons.component';
+import { CurrentValueComponent } from './components/current-value.component';
 import { SingleButtonComponent } from './components/single-button.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SingleButtonComponent } from './components/single-button.component';
     AppComponent,
 
     CalculatorButtonsComponent,
+    CurrentValueComponent,
     SingleButtonComponent
   ],
   providers:    [
