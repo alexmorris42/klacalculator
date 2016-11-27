@@ -5,6 +5,7 @@ import { AppState } from '../root-store';
 @Injectable()
 export class CurrentActions {
     static CURRENT_APPLY_NUMERIC_CHARACTER = 'CURRENT_APPLY_NUMERIC_CHARACTER';
+    static CURRENT_REMOVE_CHARACTER = 'CURRENT_REMOVE_CHARACTER';
     static CURRENT_CLEAR = 'CURRENT_CLEAR';
     static CLEAR_ALL = 'CLEAR_ALL';
 
@@ -14,8 +15,12 @@ export class CurrentActions {
         this.ngRedux.dispatch({ type: CurrentActions.CURRENT_APPLY_NUMERIC_CHARACTER, payload: character });
     }
 
+    public removeCharacter() {
+        this.ngRedux.dispatch({ type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
+    }
+
     public clearCurrentOnly() {
-        this.ngRedux.dispatch({ type: CurrentActions.CURRENT_CLEAR, payload: null });
+        this.ngRedux.dispatch({ type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
     }
 
     public clearAll() {

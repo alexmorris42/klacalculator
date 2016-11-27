@@ -35,4 +35,19 @@ describe('CurrentReducer', function () {
         let result = current('123', { type: CurrentActions.CLEAR_ALL, payload: null });
         expect(result).toBe('');
     });
+
+    it('should remove numeric characters from the end of the string', () => {
+        let result = current('2310.23', { type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
+        expect(result).toBe('2310.2');
+    });    
+
+    it('should remove decimal character from the end of the string', () => {
+        let result = current('2310.', { type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
+        expect(result).toBe('2310');
+    });    
+
+    it('should do nothing when removing characters from blank string', () => {
+        let result = current('', { type: CurrentActions.CURRENT_REMOVE_CHARACTER, payload: null });
+        expect(result).toBe('');
+    });    
 });

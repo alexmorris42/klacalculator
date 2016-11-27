@@ -31,8 +31,17 @@ export class AppComponent {
         let key = event.key;
         if(key === 'x') {
             key = '*';
+        } else if(key === 'Enter') {
+            key = '=';
         }
         this.applyAction(key);
+    }
+
+    @HostListener('document:keydown', ['$event'])
+    public handleKeyDown(event: KeyboardEvent) {
+        if(event.key === 'Backspace') {
+            this.currentActions.removeCharacter();
+        }
     }
 
     public applyAction(action: string) {
